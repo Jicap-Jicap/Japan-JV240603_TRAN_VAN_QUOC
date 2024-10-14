@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <title>Thêm mới danh mục</title>
+    <style>
+        /* Thiết lập font chữ và nền trang */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Màu nền trang */
+            margin: 0; /* Bỏ margin cho body */
+            padding: 20px; /* Khoảng cách xung quanh */
+        }
+
+        /* Định dạng div chứa form */
+        form {
+            background-color: white; /* Màu nền trắng cho form */
+            padding: 20px; /* Khoảng đệm bên trong */
+            border-radius: 5px; /* Bo góc cho form */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+            max-width: 500px; /* Đặt chiều rộng tối đa cho form */
+            margin: auto; /* Căn giữa form */
+        }
+
+        /* Định dạng các nhãn (label) */
+        label {
+            font-weight: bold; /* Đậm cho nhãn */
+            margin-bottom: 5px; /* Khoảng cách dưới nhãn */
+            display: block; /* Hiển thị nhãn trên một dòng riêng */
+        }
+
+        /* Định dạng ô nhập liệu (input) */
+        input[type="text"] {
+            width: 100%; /* Chiều rộng ô nhập là 100% */
+            padding: 10px; /* Khoảng đệm bên trong */
+            border: 1px solid #ccc; /* Đường viền xám */
+            border-radius: 3px; /* Bo góc cho ô nhập */
+            box-sizing: border-box; /* Bao gồm padding trong chiều rộng */
+            margin-bottom: 20px; /* Khoảng cách dưới ô nhập */
+        }
+
+        /* Định dạng nút bấm */
+        button {
+            background-color: #007BFF; /* Màu nền xanh dương */
+            color: white; /* Màu chữ trắng */
+            padding: 10px 15px; /* Khoảng đệm cho nút */
+            border: none; /* Không viền */
+            border-radius: 5px; /* Bo góc cho nút */
+            cursor: pointer; /* Hiệu ứng con trỏ khi hover */
+            transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu */
+        }
+
+        /* Hiệu ứng hover cho nút bấm */
+        button:hover {
+            background-color: #0056b3; /* Màu nền khi hover */
+        }
+    </style>
+</head>
+<body>
+<form action="" method="post" th:object="${category}">
+    <div>
+        <label>Category Name</label>
+        <input type="text" th:field="*{name}" />
+    </div>
+    <div>
+        <label>Category Description</label>
+        <input type="text" th:field="*{description}" />
+    </div>
+    <button type="submit" class="btn btn-primary">Sửa</button>
+</form>
+</body>
+</html>
+</title>
+</head>
+<body>
+
+</body>
+</html>

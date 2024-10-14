@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <a th:href="@{/product/add}">Them moi</a>
+    <table>
+        <thead>
+        <tr>
+            <th>STT</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Image</th>
+            <th>status</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="product,loop : ${products}">
+            <td scope="row" th:text="${loop.count}"></td>
+            <td th:text="${product.productName}"></td>
+            <td th:text="${product.price}"></td>
+            <td th:text="${product.category.name}"></td>
+            <td>
+                <img th:src="@{|/uploads/${product.image}|}" width="150px" />
+            </td>
+
+            <td>
+                <a th:href="@{'product/edit/'+${product.id}}">Edit</a>
+                <a th:href="@{'product/delete/'+${product.id}}">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

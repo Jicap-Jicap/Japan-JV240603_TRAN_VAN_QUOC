@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <div>
+        <div>
+            <form action="" method="post" th:object="${product}" enctype="multipart/form-data">
+                <div>
+                    <label >Product Name</label>
+                    <input type="text" th:field="*{productName}" />
+                </div>
+                <div>
+                    <label >Product price</label>
+                    <input type="text" th:field="*{price}" />
+                </div>
+                <div>
+                    <label >Category </label>
+                    <select th:field="*{category.id}" >
+                        <option th:each="category:${categories}" th:value="${category.id}" th:text="${category.name}"></option>
+                    </select>
+                </div>
+                <div>
+                    <label >Product image</label>
+                    <input type="file" name="imgFile" />
+                </div>
+                <button type="submit">Thêm mới</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <style>
+        /* Thiết lập font chữ và căn chỉnh trang */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Căn chỉnh menu */
+        nav {
+            background-color: #007BFF;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Định dạng các liên kết trong menu */
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            background-color: #0056b3;
+            border-radius: 3px;
+            transition: background-color 0.3s ease;
+            margin: 0 5px;
+        }
+
+        /* Hiệu ứng hover khi di chuột qua liên kết */
+        nav a:hover {
+            background-color: #003f7f;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a th:href="@{/category}">Quản lý danh mục</a> |
+    <a th:href="@{/product}">Quản lý sản phẩm</a>
+</nav>
+</body>
+</html>
